@@ -1,0 +1,15 @@
+{% extends 'beautido_app/base.html' %}
+
+{% block content %}
+    <ul class="list-articles">
+    {% for girl in girls %}
+        <li>
+            <h3>{{ girl.title }}</h3>
+            <p>{{ girl.content|truncatewords:10 }}</p>
+            <div class="clear"></div>
+            <p class="link-read-post"><a href="#">Read about this girl</a></p>
+        </li>
+
+    {% endfor %}
+    </ul>
+{% endblock content %}
