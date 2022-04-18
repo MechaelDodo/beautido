@@ -1,15 +1,23 @@
 {% extends 'beautido_app/base.html' %}
 
+
 {% block content %}
     <ul class="list-articles">
     {% for girl in girls %}
         <li>
-            <h3>{{ girl.title }}</h3>
-            <p>{{ girl.content|truncatewords:10 }}</p>
+            <div class="article-panel">
+                <p class="first">{{ girl.category }}</p>
+                <p class="last">{{ girl.time_update|date:"d-m-Y H:i:s" }}</p>
+            </div>
+            {% if girl.photo %}
+                <p><img class="img-article-left thumb" src="{{ girl.photo.url }}"></p>
+            {% endif %}
+            <h2>{{ girl.title }}</h2>
+            <p>{{ girl.content|truncatewords:30 }}</p>
             <div class="clear"></div>
-            <p class="link-read-post"><a href="#">Read about this girl</a></p>
+            <p class="link-read-post"><a href="{{ girl.get_absolute_url }}">Read about this girl</a></p>
         </li>
-
     {% endfor %}
     </ul>
 {% endblock content %}
+

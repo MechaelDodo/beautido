@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% for category in categories %}
+    {% if cat_selected == category.slug %}
+        <li class="selected">{{ category.title }}</li>
+    {% else %}
+        <li><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
+    {% endif %}
+{% endfor %}

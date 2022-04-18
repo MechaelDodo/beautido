@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% for m in menu %}
+    {% if not forloop.last %}
+        <li><a href="{% url m.url_name %}">{{m.title}}</a></li>
+    {% else %}
+        <li class="last"><a href="{% url m.url_name %}">{{m.title}}</a></li>
+    {% endif %}
+{% endfor %}
