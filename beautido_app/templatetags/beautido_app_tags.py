@@ -23,6 +23,6 @@ def show_categories(sort=None, cat_selected=0):
     return {'categories': categories, 'cat_selected': cat_selected}
 
 
-@register.inclusion_tag('beautido_app/list_menu.html')
-def show_menu():
-    return {'menu': menu}
+# @register.inclusion_tag('beautido_app/list_menu.html')
+# def show_menu():
+#     return {'menu': menu}
