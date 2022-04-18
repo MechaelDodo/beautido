@@ -18,6 +18,8 @@ from django.views.generic import ListView, DetailView, CreateView
 #]
 
 
+
+
 class GirlsHome(ListView):
     model = Girl
     template_name = 'beautido_app/index.html'
