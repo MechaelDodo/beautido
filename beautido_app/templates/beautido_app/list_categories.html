@@ -1,7 +1,9 @@
 {% for category in categories %}
-    {% if cat_selected == category.slug %}
-        <li class="selected">{{ category.title }}</li>
-    {% else %}
-        <li><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
-    {% endif %}
+{% comment %}    {% if category.girls__count > 0 %}{% endcomment %}
+        {% if cat_selected == category.slug %}
+            <li class="selected">{{ category.title }}</li>
+        {% else %}
+            <li><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
+        {% endif %}
+{% comment %}    {% endif %}{% endcomment %}
 {% endfor %}
