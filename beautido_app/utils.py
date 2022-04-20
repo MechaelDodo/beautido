@@ -3,7 +3,7 @@ menu = [
    {'title': 'About', 'url_name': 'about'},
    {'title': 'Add girl', 'url_name': 'add_girl'},
    {'title': 'Photos', 'url_name': 'show_photos'},
-   {'title': 'Login', 'url_name': 'login'},
+   # {'title': 'Login', 'url_name': 'login'},
 ]
 
 

@@ -1,3 +1,4 @@
+from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
@@ -149,6 +150,18 @@ class ShowCategory(DataMixin, ListView):
 #         'cat_selected': category_slug,
 #     }
 #     return render(request, 'beautido_app/index.html', context)
+
+
+class RegisterUser(DataMixin, CreateView):
+    form_class = RegisterUserForm
+    template_name = 'beautido_app/register.html'
+    success_url = reverse_lazy('login')
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context_mix = self.get_user_context(title='Регистрация')
+        return dict(list(context.items())+list(context_mix.items()))
+
 
 #def index_second(request, secid):
 #    if request.GET:
