@@ -1,5 +1,7 @@
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import logout
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.views import LoginView
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from django.urls import reverse_lazy
@@ -92,8 +94,8 @@ def show_photos(request):
     return HttpResponse('Photos')
 
 
-def login(request):
-    return HttpResponse('Login')
+# def login(request):
+#     return HttpResponse('Login')
 
 
 class ShowGirl(DataMixin, DetailView):
@@ -161,6 +163,25 @@ class RegisterUser(DataMixin, CreateView):
         context = super().get_context_data(**kwargs)
         context_mix = self.get_user_context(title='Регистрация')
         return dict(list(context.items())+list(context_mix.items()))
+
+
+
+class LoginUser(DataMixin, LoginView):
+    form_class = LoginUserForm
+    template_name = 'beautido_app/login.html'
+
+    def get_context_data(self, *, object_list=None, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context_mix = self.get_user_context(title='Авторизация')
+        return dict(list(context.items())+list(context_mix.items()))
+
+    def get_success_url(self):
+        return reverse_lazy('home')
+
+    @staticmethod
+    def logout_user(request):
+        logout(request)
+        return redirect('home')
 
 
 #def index_second(request, secid):
