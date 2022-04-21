@@ -1,4 +1,4 @@
-from django.contrib.auth import logout
+from django.contrib.auth import logout, login
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.views import LoginView
@@ -164,7 +164,10 @@ class RegisterUser(DataMixin, CreateView):
         context_mix = self.get_user_context(title='Регистрация')
         return dict(list(context.items())+list(context_mix.items()))
 
-
+    def form_valid(self, form):
+        user = form.save()
+        login(self.request, user)
+        return redirect('home')
 
 class LoginUser(DataMixin, LoginView):
     form_class = LoginUserForm
