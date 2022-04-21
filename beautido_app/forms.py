@@ -13,7 +13,7 @@ class AddGirlForm(forms.ModelForm):
 
     class Meta:
         model = Girl
-        fields = ['title', 'slug', 'content', 'photo', 'is_published', 'category']   #'__all__'
+        fields = ['title', 'slug', 'content', 'photo', 'category']   #'__all__'
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-input', }),
             'content': forms.Textarea(attrs={'cols': 60, 'rows': 10}),

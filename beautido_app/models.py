@@ -11,7 +11,7 @@ class Girl(models.Model):
     photo = models.ImageField(upload_to='photos/%y/%m/%d', verbose_name='Фото')
     time_create = models.DateTimeField(auto_now_add=True)
     time_update = models.DateTimeField(auto_now=True)
-    is_published = models.BooleanField(default=True)
+    is_published = models.BooleanField(default=False)
     category = models.ForeignKey('Category', on_delete=models.CASCADE, verbose_name='Категория')
 
     class Meta:
