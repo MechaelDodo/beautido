@@ -1,0 +1,11 @@
+{% extends 'beautido_app/base.html' %}
+
+{% block content %}
+
+                {% for girl in girls %}
+                    <a href="{{ girl.get_absolute_url }}">
+                        <img src="{{ girl.photo.url }}" width="350px" height="350px">
+                    </a>
+                {% endfor %}
+
+{% endblock content %}

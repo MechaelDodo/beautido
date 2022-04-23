@@ -90,8 +90,19 @@ class AddGirl(LoginRequiredMixin, DataMixin, CreateView):
 #     return render(request, 'beautido_app/add_girl.html', context)
 
 
-def show_photos(request):
-    return HttpResponse('Photos')
+class ShowPhotos(DataMixin, ListView):
+    model = Girl
+    template_name = 'beautido_app/photos.html'
+    context_object_name = 'girls'
+    paginate_by = 6
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context_mix = self.get_user_context(title='Фотографии')
+        return dict(list(context.items())+list(context_mix.items()))
+
+# def show_photos(request):
+#     return HttpResponse('Photos')
 
 
 # def login(request):

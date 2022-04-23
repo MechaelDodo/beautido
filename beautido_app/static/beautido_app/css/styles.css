@@ -7,6 +7,8 @@ html, body {
 	color: #444;
 }
 
+
+
 a {
 	color: #0059b2;
 	text-decoration: none;
@@ -428,3 +430,6 @@ ul.lang-list li a:hover {color: #fdc073;}
 .list-pages .page-num-selected:hover {
 	box-shadow: none; 
 }
+
+
+/*---------------------------------------------------------------------------------*/

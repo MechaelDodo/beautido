@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0607aacd-4af9-47be-9b4d-ee36e8456593" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/beautido_app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/beautido_app/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beautido_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/beautido_app/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/beautido_app/templates/beautido_app/photos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautido_app/static/beautido_app/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/beautido_app/static/beautido_app/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautido_app/static/beautido_app/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/beautido_app/static/beautido_app/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautido_app/static/beautido_app/images/main.ico" beforeDir="false" afterPath="$PROJECT_DIR$/beautido_app/static/beautido_app/images/main.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautido_app/templates/beautido_app/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/beautido_app/templates/beautido_app/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautido_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/beautido_app/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautido_app/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/beautido_app/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautido_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/beautido_app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,46 +28,49 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/beautido_project/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/beautido_project/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2159">
-              <caret line="127" column="1" selection-start-line="127" selection-start-column="1" selection-end-line="127" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/beautido_app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="349">
-              <caret line="67" column="36" lean-forward="true" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
+            <state relative-caret-position="842">
+              <caret line="96" column="19" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="19" />
+              <folding>
+                <marker date="1650731761428" expanded="true" signature="3261:3322" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/beautido_app/templates/beautido_app/login.html">
+        <entry file="file://$PROJECT_DIR$/beautido_app/static/beautido_app/css/styles.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="67" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
+            <state relative-caret-position="298">
+              <caret line="85" column="41" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/beautido_app/templates/beautido_app/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="90" selection-start-line="28" selection-start-column="90" selection-end-line="28" selection-end-column="90" />
+            <state relative-caret-position="221">
+              <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/beautido_app/templates/beautido_app/photos.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="79" selection-start-line="6" selection-start-column="79" selection-end-line="6" selection-end-column="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/beautido_app/templates/beautido_app/about.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -74,19 +85,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/beautido_app/templates/beautido_app/add_girl.html">
+        <entry file="file://$PROJECT_DIR$/beautido_app/utils.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="56" lean-forward="true" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+              <caret line="10" column="15" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/beautido_app/utils.py">
+        <entry file="file://$PROJECT_DIR$/beautido_app/templates/beautido_app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="49" />
+            <state relative-caret-position="391">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -94,7 +105,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/beautido_app/forms.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="170">
               <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
@@ -103,11 +114,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/beautido_app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="53" lean-forward="true" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+            <state relative-caret-position="493">
+              <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -125,6 +136,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>logo</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -140,17 +156,18 @@
         <option value="$PROJECT_DIR$/beautido_app/templates/beautido_app/list_menu.html" />
         <option value="$PROJECT_DIR$/beautido_app/templatetags/beautido_app_tags.py" />
         <option value="$PROJECT_DIR$/beautido_app/templates/beautido_app/list_categories.html" />
-        <option value="$PROJECT_DIR$/beautido_app/static/beautido_app/css/styles.css" />
-        <option value="$PROJECT_DIR$/beautido_app/utils.py" />
         <option value="$PROJECT_DIR$/beautido_app/templates/beautido_app/add_girl.html" />
         <option value="$PROJECT_DIR$/beautido_app/templates/beautido_app/register.html" />
         <option value="$PROJECT_DIR$/beautido_project/settings.py" />
         <option value="$PROJECT_DIR$/beautido_app/templates/beautido_app/login.html" />
-        <option value="$PROJECT_DIR$/beautido_app/urls.py" />
-        <option value="$PROJECT_DIR$/beautido_app/templates/beautido_app/base.html" />
-        <option value="$PROJECT_DIR$/beautido_app/views.py" />
         <option value="$PROJECT_DIR$/beautido_app/forms.py" />
         <option value="$PROJECT_DIR$/beautido_app/models.py" />
+        <option value="$PROJECT_DIR$/beautido_app/utils.py" />
+        <option value="$PROJECT_DIR$/beautido_app/urls.py" />
+        <option value="$PROJECT_DIR$/beautido_app/views.py" />
+        <option value="$PROJECT_DIR$/beautido_app/templates/beautido_app/base.html" />
+        <option value="$PROJECT_DIR$/beautido_app/templates/beautido_app/photos.html" />
+        <option value="$PROJECT_DIR$/beautido_app/static/beautido_app/css/styles.css" />
       </list>
     </option>
   </component>
@@ -345,12 +362,15 @@
       <workItem from="1650490525200" duration="1522000" />
       <workItem from="1650502495596" duration="1792000" />
       <workItem from="1650504305690" duration="2010000" />
-      <workItem from="1650565606390" duration="146000" />
+      <workItem from="1650565606390" duration="1360000" />
+      <workItem from="1650731083174" duration="1790000" />
+      <workItem from="1650732923450" duration="1665000" />
+      <workItem from="1650735762276" duration="1708000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79146000" />
+    <option name="totallyTimeSpent" value="85523000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -363,9 +383,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992722" visible="true" weight="0.24520256" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992722" visible="true" weight="0.2531983" />
       <window_info id="Structure" order="1" sideWeight="0.5007278" side_tool="true" weight="0.3336887" />
       <window_info id="Favorites" order="2" sideWeight="0.5007278" side_tool="true" weight="0.3336887" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -460,29 +479,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/beautido_app/templates/beautido_app/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/beautido_app/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/beautido_app/static/beautido_app/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6987">
-          <caret line="411" column="41" selection-start-line="411" selection-start-column="24" selection-end-line="411" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/beautido_app/templates/beautido_app/list_categories.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/beautido_app/templatetags/beautido_app_tags.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -494,34 +492,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/beautido_app/templates/beautido_app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/beautido_app/templates/beautido_app/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/beautido_app/templates/beautido_app/list_menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/beautido_app/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -546,10 +520,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/beautido_app/templates/beautido_app/base.html">
+    <entry file="file://$PROJECT_DIR$/beautido_app/templates/beautido_app/add_girl.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="90" selection-start-line="28" selection-start-column="90" selection-end-line="28" selection-end-column="90" />
+        <state relative-caret-position="170">
+          <caret line="10" column="56" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beautido_app/templates/beautido_app/list_menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beautido_app/templates/beautido_app/list_categories.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beautido_app/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beautido_app/templates/beautido_app/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -560,30 +565,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/beautido_app/templates/beautido_app/add_girl.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="56" lean-forward="true" selection-start-line="10" selection-start-column="56" selection-end-line="10" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/beautido_app/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="49" />
+        <state relative-caret-position="170">
+          <caret line="10" column="15" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/beautido_app/views.py">
+    <entry file="file://$PROJECT_DIR$/beautido_app/templates/beautido_app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="349">
-          <caret line="67" column="36" lean-forward="true" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
+        <state relative-caret-position="391">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/beautido_app/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="170">
           <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
@@ -593,11 +591,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/beautido_app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="53" lean-forward="true" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+        <state relative-caret-position="493">
+          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beautido_app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="842">
+          <caret line="96" column="19" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="19" />
+          <folding>
+            <marker date="1650731761428" expanded="true" signature="3261:3322" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beautido_app/templates/beautido_app/photos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="79" selection-start-line="6" selection-start-column="79" selection-end-line="6" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beautido_app/static/beautido_app/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="85" column="41" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beautido_app/templates/beautido_app/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
