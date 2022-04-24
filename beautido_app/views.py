@@ -1,3 +1,4 @@
+import numpy
 from django.contrib.auth import logout, login
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -72,6 +73,8 @@ class AddGirl(LoginRequiredMixin, DataMixin, CreateView):
         context_mix = self.get_user_context(title='Добавить девушку')
         return dict(list(context.items()) + list(context_mix.items()))
 
+
+
 # def add_girl(request):
 #     if request.method == 'POST':
 #         form = AddGirlForm(request.POST, request.FILES)
@@ -109,17 +112,32 @@ class ShowPhotos(DataMixin, ListView):
 #     return HttpResponse('Login')
 
 
-class ShowGirl(DataMixin, DetailView):
+
+class ShowGirl(LoginRequiredMixin, DataMixin, DetailView):
     model = Girl
     template_name = 'beautido_app/girl.html'
     context_object_name = 'girl'
     slug_url_kwarg = 'girl_slug'
 
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        # block score
+        scores = Score.objects.filter(girl__pk=context['girl'].pk)
+        scores = [score.score_number for score in scores]
+        average_score = numpy.mean(scores)
+        context['score'] = average_score
+        context['options'] = [1, 2, 3, 4, 5]
+        # endblock score
+
         context_mix = self.get_user_context(title=context['girl'].title)
         return dict(list(context.items()) + list(context_mix.items()))
 
+    def post(self, request, *args, **kwargs):
+        # Get your data from post request eg. request.POST['mykey']
+        #return redirect('success_page')
+        
+        return redirect('show_girl', girl_slug='qqqqqqqqq')
 
 
 # def show_girl(request, girl_slug):
@@ -179,6 +197,7 @@ class RegisterUser(DataMixin, CreateView):
         user = form.save()
         login(self.request, user)
         return redirect('home')
+
 
 class LoginUser(DataMixin, LoginView):
     form_class = LoginUserForm

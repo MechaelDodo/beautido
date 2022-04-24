@@ -20,3 +20,4 @@ class CategoryAdmin(admin.ModelAdmin):
 
 admin.site.register(Girl, GirlAdmin)
 admin.site.register(Category, CategoryAdmin)
+admin.site.register(Score)

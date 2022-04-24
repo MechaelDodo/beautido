@@ -33,6 +33,17 @@ class AddGirlForm(forms.ModelForm):
     #                                  empty_label='Категория не выбрана')
 
 
+# class AddScore(forms.ModelForm):
+#     class Meta:
+#         model = Score
+#         fields = ['score_number', 'score_select']   #'__all__'
+#         widgets = {
+#             'score_number': forms.IntegerField(label='Общая оценка', attrs={'class': 'form-input', }),
+#             'score_select': forms.Select(attrs={'class': 'form-input', }),
+#         }
+
+
+
 class RegisterUserForm(UserCreationForm):
     username = forms.CharField(label='Логин', widget=forms.TextInput(attrs={'class': 'form-input', }))
     email = forms.EmailField(label='Адрес эл.почты', widget=forms.EmailInput(attrs={'class': 'form-input', }))

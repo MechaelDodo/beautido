@@ -6,4 +6,18 @@
         <img class="img-article-left" src="{{ girl.photo.url }}">
     {% endif %}
     {{ girl.content|linebreaks }}
+    {% block score %}
+        {% if request.user.is_authenticated %}
+            <form method="post">
+                {% csrf_token %}
+                <select>
+                    {% for option in options %}
+                        <option>{{ option }}</option>
+                    {% endfor %}
+                </select>
+                <button type="submit">Оценить</button>
+            </form>
+        {% endif %}
+        <h3>Средняя оценка: {{ score }}</h3>
+    {% endblock score %}
 {% endblock %}

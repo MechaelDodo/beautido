@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse
 
@@ -33,3 +34,13 @@ class Category(models.Model):
 
     def get_absolute_url(self):
         return reverse('show_the_category', args=[self.slug, ])
+
+
+class Score(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Пользователь')
+    girl = models.ForeignKey('Girl', on_delete=models.CASCADE, verbose_name='Девушка')
+    score_number = models.IntegerField(verbose_name='Оценка')
+
+    def __str__(self):
+        return str(self.score_number)
+
