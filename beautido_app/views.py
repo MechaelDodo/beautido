@@ -7,6 +7,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from django.urls import reverse_lazy
 
+from beautido_app.service import set_score
 from .models import *
 from .forms import *
 from django.views.generic import ListView, DetailView, CreateView
@@ -61,6 +62,55 @@ def about(request):
     }
     return render(request, 'beautido_app/about.html', context)
 
+class ShowGirl( DataMixin, DetailView):
+    model = Girl
+    template_name = 'beautido_app/girl.html'
+    context_object_name = 'girl'
+    slug_url_kwarg = 'girl_slug'
+
+    #form_class = SelectScore
+    #success_url = reverse_lazy('show_girl')
+
+
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # block score
+        scores = Score.objects.filter(girl__pk=context['girl'].pk)
+        scores = [score.score_number for score in scores]
+        average_score = numpy.mean(scores)
+        #form = SelectScore()
+        #context['form'] = form
+        context['score'] = average_score
+        context['options'] = (1, 2, 3, 4, 5)
+        # endblock score
+
+        context_mix = self.get_user_context(title=context['girl'].title)
+        return dict(list(context.items()) + list(context_mix.items()))
+
+    def post(self, request, *args, **kwargs):
+        # Get your data from post request eg. request.POST['mykey']
+        #return redirect('success_page')
+        #form = SelectScore(request.POST)
+        print(request.POST['score_select'], 'LOL')
+        set_score(request, self.get_object().slug, request.POST['score_select'])
+        #if form.is_valid():
+        #    print(form.cleaned_data['score_select'], 'HAHAHAHAHHA')
+        #print(request.POST.get('option'), 'HAHAHAHAHHA')
+
+        return redirect('show_girl', girl_slug=self.get_object().slug)
+
+
+# def show_girl(request, girl_slug):
+#     girl = get_object_or_404(Girl, slug=girl_slug)
+#     context = {
+#         'title': girl.title,
+#         'girl': girl,
+#         'cat_selected': girl.category_id,
+#     }
+#
+#     return render(request, 'beautido_app/girl.html', context)
+
 
 class AddGirl(LoginRequiredMixin, DataMixin, CreateView):
     form_class = AddGirlForm
@@ -113,42 +163,7 @@ class ShowPhotos(DataMixin, ListView):
 
 
 
-class ShowGirl(LoginRequiredMixin, DataMixin, DetailView):
-    model = Girl
-    template_name = 'beautido_app/girl.html'
-    context_object_name = 'girl'
-    slug_url_kwarg = 'girl_slug'
 
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        # block score
-        scores = Score.objects.filter(girl__pk=context['girl'].pk)
-        scores = [score.score_number for score in scores]
-        average_score = numpy.mean(scores)
-        context['score'] = average_score
-        context['options'] = [1, 2, 3, 4, 5]
-        # endblock score
-
-        context_mix = self.get_user_context(title=context['girl'].title)
-        return dict(list(context.items()) + list(context_mix.items()))
-
-    def post(self, request, *args, **kwargs):
-        # Get your data from post request eg. request.POST['mykey']
-        #return redirect('success_page')
-        
-        return redirect('show_girl', girl_slug='qqqqqqqqq')
-
-
-# def show_girl(request, girl_slug):
-#     girl = get_object_or_404(Girl, slug=girl_slug)
-#     context = {
-#         'title': girl.title,
-#         'girl': girl,
-#         'cat_selected': girl.category_id,
-#     }
-#
-#     return render(request, 'beautido_app/girl.html', context)
 
 
 class ShowCategory(DataMixin, ListView):
@@ -181,6 +196,8 @@ class ShowCategory(DataMixin, ListView):
 #         'cat_selected': category_slug,
 #     }
 #     return render(request, 'beautido_app/index.html', context)
+
+
 
 
 class RegisterUser(DataMixin, CreateView):

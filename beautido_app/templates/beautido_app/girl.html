@@ -10,12 +10,15 @@
         {% if request.user.is_authenticated %}
             <form method="post">
                 {% csrf_token %}
-                <select>
+                <select name="score_select">
                     {% for option in options %}
-                        <option>{{ option }}</option>
+                        <option value="{{ option }}" name="option">{{ option }}</option>
                     {% endfor %}
                 </select>
-                <button type="submit">Оценить</button>
+                {% comment %}{% for f in form %}
+                    {{ f }}
+                {% endfor %}{% endcomment %}
+                <button value="Select" type="submit" >Оценить</button>
             </form>
         {% endif %}
         <h3>Средняя оценка: {{ score }}</h3>

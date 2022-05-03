@@ -14,6 +14,7 @@ class AddGirlForm(forms.ModelForm):
     class Meta:
         model = Girl
         fields = ['title', 'slug', 'content', 'photo', 'category']   #'__all__'
+
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-input', }),
             'content': forms.Textarea(attrs={'cols': 60, 'rows': 10}),
@@ -63,3 +64,10 @@ class RegisterUserForm(UserCreationForm):
 class LoginUserForm(AuthenticationForm):
     username = forms.CharField(label='Логин', widget=forms.TextInput(attrs={'class': 'form-input', }))
     password = forms.CharField(label='Пароль', widget=forms.PasswordInput(attrs={'class': 'form-input', }))
+
+
+# class SelectScore(forms.Form):
+#     score_select = forms.ChoiceField(choices=((1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5')))
+
+
+
