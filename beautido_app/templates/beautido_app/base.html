@@ -40,13 +40,15 @@
 
             <table class="table-content" border=0 cellpadding="0" cellspacing="0">
             <tr>
+                {% load cache %}
+
                 <!-- Sidebar слева -->
                 <td valign="top" class="left-chapters">
                     <ul id="leftchapters">
                         {% if cat_selected == 0 %}
-                            <li class="selected">all categories</li>
+                            <li class="selected">Все категории</li>
                         {% else %}
-                            <li><a href="{% url 'home' %}">all categories</a></li>
+                            <li><a href="{% url 'home' %}">Все категории</a></li>
                         {% endif %}
                         {% comment %}{% get_categories as categories %}
                         {% for category in categories %}
@@ -56,11 +58,13 @@
                                 <li><a href="{{ category.get_absolute_url }}">{{ category.title }}</a></li>
                             {% endif %}
                         {% endfor %}{% endcomment %}
+                    {% cache 60 sidebar %}
                         {% show_categories sort='-title' cat_selected=cat_selected %}
                         {% comment %}<li class="share">
                         <p>Наш канал</p>
                         <a class="share-yt" href="https://www.youtube.com/channel/UClJzWfGWuGJL2t-3dYKcHTA/playlists" target="_blank" rel="nofollow"></a>
                         </li>{% endcomment %}
+                    {% endcache %}
                     </ul>
                 </td>
                 <!-- Конец Sidebar'а -->

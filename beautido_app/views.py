@@ -32,7 +32,7 @@ class GirlsHome(DataMixin, ListView):
     #                  'cat_selected': 0, }
 
     def get_queryset(self):
-        return Girl.objects.filter(is_published=True)
+        return Girl.objects.filter(is_published=True).select_related('category')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -92,7 +92,7 @@ class ShowGirl( DataMixin, DetailView):
         # Get your data from post request eg. request.POST['mykey']
         #return redirect('success_page')
         #form = SelectScore(request.POST)
-        print(request.POST['score_select'], 'LOL')
+
         set_score(request, self.get_object().slug, request.POST['score_select'])
         #if form.is_valid():
         #    print(form.cleaned_data['score_select'], 'HAHAHAHAHHA')
@@ -149,6 +149,9 @@ class ShowPhotos(DataMixin, ListView):
     context_object_name = 'girls'
     paginate_by = 6
 
+    def get_queryset(self):
+        return Girl.objects.filter(is_published=True)
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context_mix = self.get_user_context(title='Фотографии')
@@ -174,7 +177,7 @@ class ShowCategory(DataMixin, ListView):
     #extra_context = {'title': 'Главная страница'}
 
     def get_queryset(self):
-        return Girl.objects.filter(category__slug=self.kwargs['category_slug'], is_published=True)
+        return Girl.objects.filter(category__slug=self.kwargs['category_slug'], is_published=True).select_related('category')
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
